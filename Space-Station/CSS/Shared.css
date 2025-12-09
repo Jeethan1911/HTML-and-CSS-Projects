@@ -1,6 +1,6 @@
-/* =========================================================
-   GLOBAL / SHARED STYLES
-   ========================================================= */
+/***************************************************
+    GLOBAL / SHARED STYLES
+****************************************************/
 
 html {
     font-family: sans-serif;
@@ -57,7 +57,6 @@ img {
 }
 
 /* Layout helpers */
-
 .wrap {
     width: 100%;
     position: absolute;
@@ -74,9 +73,9 @@ img {
     text-align: center;
 }
 
-/* =========================================================
-   NAVIGATION + MENU ANIMATION
-   ========================================================= */
+/***************************************************
+    NAVIGATION + MENU ANIMATION
+****************************************************/
 
 .menu-container {
     width: 100%;
@@ -108,22 +107,42 @@ img {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-/* Active / hover style from “animations.css” idea */
 .menu li:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* =========================================================
-   HOME SECTION
-   ========================================================= */
+/***************************************************
+    HOME SECTION BACKGROUND IMAGE
+****************************************************/
 
 #home {
-    background: url("planets.jpg") no-repeat 50% 50%;
+    position: relative;
+    background: url("Thumb/planets.jpg") no-repeat center center;
     background-size: cover;
-    height: 100vh;
+    background-attachment: fixed;
+    min-height: 800px;
+    padding-top: 60px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Optional dark overlay for readability */
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+#home .container {
+    position: relative;
+    z-index: 1;
 }
 
 .head-main {
@@ -136,9 +155,9 @@ img {
     text-transform: uppercase;
 }
 
-/* =========================================================
-   GALLERY SECTION + HOVER EFFECT
-   ========================================================= */
+/***************************************************
+    GALLERY SECTION + PHOTO ANIMATION
+****************************************************/
 
 #gallery {
     background: #000;
@@ -156,6 +175,7 @@ img {
     width: 30%;
     min-width: 220px;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .photo {
@@ -163,10 +183,11 @@ img {
 }
 
 .photo img {
+    width: 100%;
+    height: 100%;
     transition: transform 0.5s ease;
 }
 
-/* Overlay box */
 .photo-overlay {
     position: absolute;
     bottom: 0;
@@ -200,12 +221,14 @@ img {
     transform: translateY(0);
 }
 
-/* =========================================================
-   CONTACT / RESERVATION FORM
-   ========================================================= */
+/***************************************************
+    CONTACT / RESERVATION FORM
+****************************************************/
 
 #contact {
     background: #252525;
+    padding: 60px 0;
+    text-align: center;
 }
 
 .contact-header {
@@ -253,10 +276,6 @@ img {
     font-size: 13px;
 }
 
-.terms input[type="checkbox"] {
-    margin-right: 6px;
-}
-
 .submit-container {
     text-align: center;
     margin-top: 10px;
@@ -278,9 +297,9 @@ img {
     background: #006bb3;
 }
 
-/* =========================================================
-   RESPONSIVE QUERIES (simplified)
-   ========================================================= */
+/***************************************************
+    RESPONSIVE QUERIES
+****************************************************/
 
 @media (max-width: 768px) {
     .menu li {
