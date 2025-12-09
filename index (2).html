@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Columns with &lt;col&gt;</title>
+
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin: 40px auto;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    /* Column-specific styles will be applied via <col> */
+    .col-name  { background-color: #f0f8ff; }
+    .col-age   { background-color: #fff4e6; }
+    .col-city  { background-color: #e8ffe8; }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">People Table Using &lt;col&gt;</h1>
+
+  <table>
+    <!-- Define columns -->
+    <colgroup>
+      <col class="col-name">
+      <col class="col-age">
+      <col class="col-city">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Alice</td>
+        <td>24</td>
+        <td>New York</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>31</td>
+        <td>London</td>
+      </tr>
+      <tr>
+        <td>Charlie</td>
+        <td>28</td>
+        <td>Sydney</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
